@@ -6,6 +6,46 @@
 
 WebVirtCloud is a web-based virtualization platform that allows users to manage and create virtual machines on a remote server. You just need to install WebVirtCloud on a server or even your laptop or PC and you can use it to create, manage, and delete virtual machines. It is a self-hosted alternative to platforms like DigitalOcean, Linode, and Vultr.
 
+## Development RoadMap for VPS hosting
+List of features that is reqired for VPS hosting.
+
+- VPS network traffic metering
+    - Monthly traffic can be view by admin and user.
+    - Automatically disable network or speed limiting when monthly traffic reaches specific limitation.
+    - Metering in in/out/both network traffic direction.
+    - Metering in public/private network zone (IP).
+- A Switch to enable/disable billing feature for a user/globally.
+    - API improvement for WHMCS, Blesta or others
+    - Only Admin panel or admin API can create or delete VM
+- VPS IP Management
+    - Add IP Range/single IP Address for a zone or single compute node.
+    - Bind MAC address to single IP Address (e.g. OVH additional IP)
+    - Reserve specific IP Address
+    - Frontend/backend can modify VM allocated IP Address
+    - Options to only enable public/private/compute IP
+- VPS Management
+    - Add List view in VM list
+    - Add display filter in VM list
+        - can be filtered by user info, zone, compute node, IP .etc
+    - More VM configuration field.
+        - e.g. VirtIO settings
+        - directly modify VM definition xml.
+    - Change VM owner user
+    - VM cold migration between compute node (even across zone)
+- VM Size/Plan management
+    - More options (e.g. virtio options)
+    - Snapshot/backup Quota
+- OS Template improvement
+    - Add download link option to existing and new templates
+        - Auto update MD5 checksum
+    - Clean up templates images that is not frequently used.
+    - Custom OS type e.g. Alpine OpenSUSE
+- Backend logic improvement
+    - Add logic to validate VM configuration at time of VM creation
+        - avoid creating invalid VM instance
+- More...
+
+
 ## Features ##
 
 * **User management**: WebVirtCloud allows you to create and manage users.
