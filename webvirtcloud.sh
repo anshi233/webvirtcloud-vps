@@ -112,7 +112,7 @@ docker_version=$(docker --version | grep -oP '\d+\.\d+\.\d+')
 # Define the required minimum version
 required_version="25.0.0"
 # Check if Docker version meets the requirement
-if [ "$docker_version" = "$(printf '%s\n' "$docker_version" "$required_version" | sort -V | head -n1)" ]; then
+if [ "$docker_version" = "$(printf '%s\n' "$docker_version" "$required_version" | sort -Vr | head -n1)" ]; then
     echo -e "\nDocker version $docker_version is sufficient.\n"
 else
     echo -e "\nDocker version $docker_version is not sufficient. Please update Docker to version $required_version or later.\n"
